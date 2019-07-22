@@ -166,7 +166,6 @@
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Home\Teste.cshtml" />
     <Content Include="Views\User\Index.cshtml" />
-    <Content Include="Views\User\Create__.cshtml" />
     <Content Include="Views\User\Create.cshtml" />
   </ItemGroup>
   <ItemGroup>

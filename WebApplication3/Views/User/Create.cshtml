@@ -1,5 +1,9 @@
 ﻿@model WebApplication3.Models.User
 
+@{ 
+    ViewBag.Title = "Create";
+}
+
 <!DOCTYPE html>
 
 <html>
@@ -13,7 +17,7 @@
         @Html.AntiForgeryToken()
         
     <div class="form-horizontal">
-        <h2>Users / Create</h2>
+        <h2>Users / New</h2>
         <hr />
         @Html.ValidationSummary(true, "", new { @class = "text-danger" })
         <div class="form-group">
