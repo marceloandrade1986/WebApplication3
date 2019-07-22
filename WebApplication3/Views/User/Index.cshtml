@@ -1,7 +1,68 @@
 ﻿
+@model WebApplication3.Models.User
+
+
 @{
-    ViewBag.Title = "Usuários";
+    ViewBag.Title = "Users";
 }
 
-<h2>Lista de usuários</h2>
+<h2>Users</h2>
+<hr />
+@{
+    ViewBag.Title = "ASP .NET / Users";
+
+    // Necessita de TypeCasting
+    //var viewDataVariavel = ViewData["User"] as User;
+   
+    // Não necessita de TypeCasting
+    var viewBagVariavel = ViewBag.User;
+   
+}
+
+
+    <div class="btn btn-default pull-right">
+        @Html.ActionLink("New", "Create")
+    </div>
+
+@*
+
+@using (Html.BeginForm("Create", "User"))
+{
+    <input type="submit" value="Create" class="btn btn-primary" />
+}
+
+*@
+
+<table class="table table-hover table-responsive">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Last Name</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>Marcelo</td>
+            <td>Andrade</td>
+            <td><button class="btn btn-primary">Edit</button></td>
+
+        </tr>
+        <tr>
+            <td>Anne</td>
+            <td>Andrade</td>
+            <td>
+                <input type="button" name="Edit" value="Edit" class="btn btn-primary" />
+            </td>
+        </tr>
+    </tbody>
+    <tfoot>
+        <tr>
+            <td>Amount</td>
+            <td>2</td>
+            <td></td>
+        </tr>
+    </tfoot>
+</table>
+
 <p>@ViewBag.Message</p>

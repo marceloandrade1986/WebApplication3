@@ -12,7 +12,14 @@ namespace WebApplication3.Controllers
         // GET: User
         public ActionResult Index()
         {
-            ViewBag.Message = "Lista de usuários!";
+            //ViewBag.Message = "Lista de usuários!";
+
+
+            User user = new User("Tiago", 30);
+
+            ViewBag.User = user;
+
+            ViewData["User"] = user;
 
             return View();
         }
@@ -26,19 +33,17 @@ namespace WebApplication3.Controllers
         // GET: User/Create
         public ActionResult Create()
         {
-            var user = new User();
+            //User user = new User("Marcelo", 25);
 
-            ViewBag.Message = user;
+            //return View(user);
 
-            return View(user);
+            return View();
         }
 
         // POST: User/Create
         [HttpPost]
         public ActionResult Create(FormCollection collection)
         {
-            var_dump('OLA');
-
             try
             {
                 // TODO: Add insert logic here

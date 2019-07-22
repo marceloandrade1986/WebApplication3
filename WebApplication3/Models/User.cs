@@ -7,8 +7,13 @@ namespace WebApplication3.Models
 {
     public class User
     {
-        int id = 1;
-        string name = "Joaquim José";
-        double saldoConta = 1500.0;
+        public string Name { get; set; }
+        public int Age { get; set; }
+        public User(string name, int age)
+        {
+            Name = name;
+            Age = age;
+        }
+        // Other properties, methods, events...
     }
 }

@@ -10,9 +10,11 @@ namespace WebApplication3.Controllers
     {
         public ActionResult Index()
         {
+            string title = "ASP .NET";
             string name = "Marcelo Andrade";
 
             ViewBag.Message = name;
+            ViewBag.Title = title;
 
             return View();
         }
